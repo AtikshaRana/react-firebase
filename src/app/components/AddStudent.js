@@ -25,7 +25,9 @@ export default function AddStudent() {
         studentName: name,
         phoneNumber: phone,
       });
-      router.push('/studentList'); // Navigate correctly in Next.js
+      setTimeout(() => {
+        router.push('/studentList');
+      }, 10000);
     } catch (error) {
       console.error('Error saving student:', error);
     }
@@ -43,7 +45,7 @@ export default function AddStudent() {
             onChange={(e) => setStudentId(e.target.value)}
             type="number"
             placeholder="Student ID"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
           />
 
           {/* Student Name Input */}
@@ -51,7 +53,7 @@ export default function AddStudent() {
             onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Student Name"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
           />
 
           {/* Phone Number Input */}
@@ -59,7 +61,7 @@ export default function AddStudent() {
             onChange={(e) => setPhone(e.target.value)}
             type="number"
             placeholder="Phone Number"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
           />
 
           {/* Submit Button */}

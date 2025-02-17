@@ -8,14 +8,9 @@ const DashBoard = () => {
       <div className="w-64 bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-xl">
         <div className="p-6 text-center text-2xl font-semibold">Dashboard</div>
         <ul className="mt-10 space-y-4 px-6">
-          <li className="cursor-pointer hover:bg-blue-700 py-2 px-4 rounded-md transition-all duration-200">Dashboard</li>
-          <li className="cursor-pointer hover:bg-blue-700 py-2 px-4 rounded-md transition-all duration-200">
-            <Link to='/addStudent'>Add Students</Link>
-          </li>
-          <li className="cursor-pointer hover:bg-blue-700 py-2 px-4 rounded-md transition-all duration-200">
-           <Link to='/studentList'> Student list</Link>
-          </li>
-          <li className="cursor-pointer hover:bg-blue-700 py-2 px-4 rounded-md transition-all duration-200">Profile</li>
+          {/* <li className="cursor-pointer hover:bg-blue-700 py-2 px-4 rounded-md transition-all duration-200">Dashboard</li> */}
+          <Link to='/addStudent' className="cursor-pointer hover:bg-blue-700 py-2 px-4 rounded-md transition-all duration-200 block ">Add Students</Link>
+          <Link to='/studentList' className="cursor-pointer hover:bg-blue-700 py-2 px-4 rounded-md transition-all duration-200 block"> Student list</Link>
         </ul>
       </div>
 

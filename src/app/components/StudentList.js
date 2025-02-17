@@ -38,7 +38,7 @@ export default function StudentList() {
           {students.map((student) => (
             <div
               key={student.id}
-              className="bg-white shadow-lg rounded-xl p-6 border border-gray-200 w-80 md:w-96"
+              className="bg-white shadow-lg rounded-xl p-6 border border-gray-200 w-[30%] "
             >
               <h2 className="text-xl font-bold text-gray-800">
                 {student.studentName}
