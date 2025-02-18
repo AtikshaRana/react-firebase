@@ -61,11 +61,11 @@ export default function StudentList() {
       <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
         <table className="w-full rounded-lg">
           <thead className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-            <tr className="text-lg">
-              <th className="p-4 text-left">Student ID</th>
-              <th className="p-4 text-left">Name</th>
-              <th className="p-4 text-left">Phone</th>
-              <th className="p-4 text-left">Actions</th>
+            <tr className="text-lg text-center">
+              <th className="p-4">Student ID</th>
+              <th className="p-4">Name</th>
+              <th className="p-4">Phone</th>
+              <th className="p-4">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -78,15 +78,15 @@ export default function StudentList() {
                     : index % 2 === 0
                     ? 'bg-gray-100'
                     : 'bg-white'
-                } hover:bg-gray-200 text-black`}
+                } hover:bg-gray-200 text-black text-center`}
               >
                 <td className="p-4">{student.studentId}</td>
                 <td className="p-4">{student.studentName}</td>
                 <td className="p-4">{student.phoneNumber}</td>
-                <td className="p-4 text-center">
+                <td className="p-4">
                   <button
                     onClick={() => handleDelete(student.studentId)}
-                    className="bg-red-500 text-white p-2 rounded-lg hover:bg-red-600"
+                    className="mt-4 border-2 border-red-600 text-black hover:text-white py-1 px-2 rounded-md hover:bg-red-700 transition duration-300 w-full"
                   >
                     Delete
                   </button>

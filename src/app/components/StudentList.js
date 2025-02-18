@@ -45,16 +45,6 @@ export default function StudentList() {
     <div className="p-6">
       <h1 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Student List</h1>
 
-      {/* Add Student Button */}
-      <div className="flex justify-center mb-6">
-        <button
-          onClick={() => router.push('/addStudent')}
-          className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
-        >
-          Add Student
-        </button>
-      </div>
-
       {students.length === 0 ? (
         <p className="text-gray-500 text-center">No students found.</p>
       ) : (
@@ -72,7 +62,7 @@ export default function StudentList() {
                 {/* Delete Button */}
                 <button
                   onClick={() => deleteStudent(student.id)}
-                  className="mt-4 bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 transition duration-300 w-full"
+                  className="mt-4 border-2 border-red-600 text-black hover:text-white py-2 px-4 rounded-md hover:bg-red-700 transition duration-300 w-full"
                 >
                   Delete
                 </button>
