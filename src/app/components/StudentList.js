@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 
 export default function StudentList() {
   const [students, setStudents] = useState([]);
+  const [loading, setLoading] = useState(true); // Loading state
   const router = useRouter();
 
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function StudentList() {
       } else {
         setStudents([]);
       }
+      setLoading(false); // Set loading to false once data is fetched
     });
   }, []);
 
@@ -45,7 +47,13 @@ export default function StudentList() {
     <div className="p-6">
       <h1 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Student List</h1>
 
-      {students.length === 0 ? (
+      {loading ? (
+        // Display loader while data is being fetched
+        <div className="flex justify-center">
+          <div className="spinner-border animate-spin border-t-4 border-blue-800 w-12 h-12 rounded-full"></div>
+        </div>
+      ) : students.length === 0 ? (
+        // Display message if no students are found
         <p className="text-gray-500 text-center">No students found.</p>
       ) : (
         <div className="flex justify-center w-full">
