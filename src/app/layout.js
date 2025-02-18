@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
 
           {/* Main Content */}
           <div className="flex-grow bg-gray-50 p-6 w-[calc(100%-280px)]">
-            <h1 className="text-4xl font-bold text-blue-800 text-center">
+            <h1 className="text-4xl font-bold text-blue-800 text-center pt-[100px] ">
               Welcome to your Dashboard
             </h1>
             {children}

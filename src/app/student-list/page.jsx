@@ -49,7 +49,7 @@ export default function StudentList() {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <section className="p-6 max-w-4xl mx-auto py-[20px] ">
       <h1 className="text-3xl font-bold text-blue-800 mb-6 text-center">Student List</h1>
 
       {lastAddedStudent && (
@@ -96,6 +96,6 @@ export default function StudentList() {
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
   );
 }

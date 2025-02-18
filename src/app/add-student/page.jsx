@@ -55,7 +55,7 @@ export default function AddStudent() {
   };
 
   return (
-    <div className="flex justify-center p-6 w-full">
+    <section className="flex justify-center p-6 w-full py-[20px]">
       <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
         <h1 className="text-2xl font-semibold text-blue-800 mb-4">Add Student</h1>
 
@@ -103,6 +103,6 @@ export default function AddStudent() {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }
