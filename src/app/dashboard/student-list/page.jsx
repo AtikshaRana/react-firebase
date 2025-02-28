@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { getDatabase, ref, onValue, remove } from 'firebase/database';
-import { app } from '../../firebase';
+import { app } from '../../../firebase';
 
 export default function StudentList() {
   const [students, setStudents] = useState([]);

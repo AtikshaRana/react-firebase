@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { getDatabase, ref, set } from 'firebase/database';
-import { app } from '../../firebase';
+import { app } from '../../../firebase';
 import { useRouter } from 'next/navigation';
 
 export default function AddStudent() {
