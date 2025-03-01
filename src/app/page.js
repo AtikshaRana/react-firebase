@@ -9,7 +9,6 @@ export default function Home() {
   useEffect(() => {
     router.push("/login"); // Redirect to login on homepage
   }, [router]);
-
   return (
     <div className="h-screen flex items-center justify-center">
       <p>Redirecting...</p>
