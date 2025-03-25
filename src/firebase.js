@@ -4,7 +4,9 @@ import {
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
   signOut, 
-  sendPasswordResetEmail // <-- Add this for password reset
+  sendPasswordResetEmail,
+  setPersistence,
+  browserLocalPersistence
 } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
@@ -24,6 +26,15 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+// ✅ Set auth persistence so user stays logged in for a week
+setPersistence(auth, browserLocalPersistence)
+  .then(() => {
+    console.log("✅ Auth persistence set to localStorage. User stays logged in!");
+  })
+  .catch((error) => {
+    console.error("❌ Error setting auth persistence:", error);
+  });
+
 export { 
   app, 
   auth, 
@@ -31,7 +42,7 @@ export {
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
   signOut, 
-  sendPasswordResetEmail,  // <-- Export this
+  sendPasswordResetEmail, 
   doc, 
   setDoc, 
   getDoc 
